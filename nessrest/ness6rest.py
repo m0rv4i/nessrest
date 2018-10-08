@@ -652,7 +652,7 @@ class Scanner(object):
                     method="PUT", extra=families)
 
 ################################################################################
-    def scan_add(self, targets, template="custom", name="", start=""):
+    def scan_add(self, targets, template="custom", name="", start="", emails = ""):
         '''
         After building the policy, create a scan.
         '''
@@ -679,7 +679,7 @@ class Scanner(object):
         settings.update({"description": "Created with REST API"})
         settings.update({"file_targets": ""})
         settings.update({"filters": []})
-        settings.update({"emails": ""})
+        settings.update({"emails": emails})
         settings.update({"filter_type": ""})
 
         # Dynamic items
